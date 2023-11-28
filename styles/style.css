@@ -1,17 +1,17 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-:root .theme_light{
-  --background-color: #FFF1F7;
-  --title-color: #FFC2E6;
-  --accent-color: #FF0070;
+:root .theme_light {
+  --background-color: #fff1f7;
+  --title-color: #ffc2e6;
+  --accent-color: #ff0070;
   --main-font: 'IBM Plex Mono';
   --text-color: #353430;
-  --background-img: url("../images/cover-image-light.png");
+  --background-img: url('../images/cover-image-light.png');
 }
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-color: var(--background-color); 
-  font-family: var(--main-font,  Arial, sans-serif) ;
+  background-color: var(--background-color);
+  font-family: var(--main-font, Arial, sans-serif);
   color: var(--text-color);
 }
 
@@ -25,11 +25,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1.3fr 0.5fr 1.3fr;
-  grid-template-areas: 
+  grid-template-areas:
     'nav'
     'title'
     'text';
-    align-items: center;
+  align-items: center;
   background-image: var(--background-img);
   background-size: cover;
   background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 
 .decorated-zone {
   position: relative;
-} 
+}
 
 .decorated-zone::after {
   content: '';
@@ -82,22 +82,22 @@
   height: 26px;
   text-align: end;
   font-size: 18px;
-  line-height: 138.889%; 
+  line-height: 138.889%;
   position: absolute;
   visibility: hidden;
 }
 
-.decor::after{
+.decor::after {
   content: '';
   top: 8px;
-  right: -19px; 
+  right: -19px;
   width: 9px;
   height: 9px;
   background-color: var(--accent-color);
   border-radius: 50px;
   filter: drop-shadow(0px 0px 4px var(--accent-color));
   position: absolute;
-  visibility: hidden; 
+  visibility: hidden;
 }
 
 /* кнопки */
@@ -117,10 +117,10 @@
 .header__theme-menu-button_active {
   border: 1px solid var(--text-color);
   pointer-events: none;
-}  
+}
 
 .header__theme-menu-button:hover {
-  border: 1px solid #32312D66;
+  border: 1px solid #32312d66;
 }
 
 .header__theme-menu-button:focus {
@@ -134,7 +134,7 @@
 .header__title {
   grid-area: title;
   color: var(--title-color);
-  text-shadow:  4px 4px 0px var(--accent-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 83%;
@@ -143,19 +143,19 @@
 
 .header__container-for-text {
   grid-area: text;
-  max-width: calc((100vw - 40px)/2);
+  max-width: calc((100vw - 40px) / 2);
   justify-self: end;
 }
 
 .title-decor {
   background-color: #ff8dcb;
   font-weight: 700;
-  line-height:  130% 
+  line-height: 130%;
 }
 
 /* основная часть со статьями */
 
-.main{
+.main {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
@@ -165,13 +165,13 @@
 
 .article-of-reasons {
   display: grid;
-  grid-template-columns: 1fr 2fr; 
-  grid-template-rows: 1fr 1fr; 
-  grid-template-areas: 
-  "title top-article"
-  "title bottom-article"; 
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'title top-article'
+    'title bottom-article';
   column-gap: 12px;
-  row-gap: 19px;
+  row-gap: 20px;
 }
 
 .titel-h2 {
@@ -189,7 +189,6 @@
 
 .bottom-article {
   grid-area: bottom-article;
-  
 }
 
 .link {
@@ -211,12 +210,12 @@
 
 .section-specific-reasons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: 1fr auto; 
-  gap: 18px; 
-  grid-template-areas: 
-    "title title title"
-    "multitasking food gadget";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
+  gap: 20px;
+  grid-template-areas:
+    'title title title'
+    'multitasking food gadget';
 }
 
 .titel-h2 {
@@ -225,7 +224,7 @@
 
 .article-of-reasons__title {
   max-height: 47px;
-  max-width: 315px; 
+  max-width: 315px;
 }
 
 .multitasking {
@@ -238,21 +237,21 @@
 
 .gadget {
   grid-area: gadget;
-} 
+}
 
 /* раздел с советами */
 
 .recommendations {
   display: grid;
-  grid-template-columns: 1fr 2fr; 
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 0.5fr auto auto auto auto auto;
-  grid-template-areas: 
-  "title title_2"
-  "title nebo"
-  "title music"
-  "title wolk"
-  "title nutrition"
-  "title read";  
+  grid-template-areas:
+    'title title_2'
+    'title nebo'
+    'title music'
+    'title wolk'
+    'title nutrition'
+    'title read';
   column-gap: 11px;
   row-gap: 19px;
 }
@@ -279,7 +278,7 @@
 
 .read {
   grid-area: read;
-} 
+}
 
 /* часть с картинками */
 
@@ -287,13 +286,13 @@
   margin-block-start: 20px;
   display: grid;
   column-gap: 20px;
-  row-gap: 18px; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1.2fr 1.64fr; 
-  grid-template-areas: 
-    "sunset sunset ice-cream"
-    "tape books ice-cream"
-    "tape street street"; 
+  row-gap: 18px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.2fr 1.64fr;
+  grid-template-areas:
+    'sunset sunset ice-cream'
+    'tape books ice-cream'
+    'tape street street';
 }
 
 .sunset {
@@ -304,7 +303,7 @@
 .ice-cream {
   grid-area: ice-cream;
   min-height: 100%;
-  max-width: 100%; 
+  max-width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 }
@@ -312,7 +311,7 @@
 .tape {
   grid-area: tape;
   min-height: 100%;
-  max-width: 100%; 
+  max-width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
 }
@@ -320,7 +319,7 @@
 .books {
   grid-area: books;
   min-height: 100%;
-  max-width: 100%; 
+  max-width: 100%;
   background-size: cover;
   background-position: center;
 }
@@ -329,7 +328,7 @@
   grid-area: street;
   max-width: 100%;
   min-height: 100%;
-} 
+}
 
 /* подвал */
 
@@ -344,9 +343,8 @@
 
 .footer__title {
   color: var(--title-color);
-  text-shadow:  3px 3px 0px var(--accent-color);
+  text-shadow: 3px 3px 0px var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 83%;
 }
-

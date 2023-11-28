@@ -4,13 +4,13 @@
   переключая тему
 */
 :root .theme-light {
-  --background-color: #FFF1F7;
-  --title-color: #FFC2E6;
-  --accent-color: #FF0070;
+  --background-color: #fff1f7;
+  --title-color: #ffc2e6;
+  --accent-color: #ff0070;
   --main-font: 'IBM Plex Mono';
   --text-color: #353430;
-  --background-img: url("../images/cover-image-light.png");
-} 
+  --background-img: url('../images/cover-image-light.png');
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
@@ -18,5 +18,3 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
-
-
