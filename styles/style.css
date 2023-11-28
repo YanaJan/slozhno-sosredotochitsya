@@ -181,7 +181,11 @@
 }
 
 .titel-h3 {
-  margin-block-end: 10px;
+  margin-block-end: 14px;
+}
+
+.titel-h3-litle {
+  font-weight: 400;
 }
 
 .top-article {
