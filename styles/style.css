@@ -1,5 +1,352 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+:root .theme_light{
+  --background-color: #FFF1F7;
+  --title-color: #FFC2E6;
+  --accent-color: #FF0070;
+  --main-font: 'IBM Plex Mono';
+  --text-color: #353430;
+  --background-img: url("../images/cover-image-light.png");
+}
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--background-color); 
+  font-family: var(--main-font,  Arial, sans-serif) ;
+  color: var(--text-color);
 }
+
+/* Голова сайта */
+
+.header {
+  padding: 20px;
+  min-height: 100vh;
+  overflow: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.3fr 0.5fr 1.3fr;
+  grid-template-areas: 
+    'nav'
+    'title'
+    'text';
+    align-items: center;
+  background-image: var(--background-img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 60px;
+}
+
+.header__theme-menu {
+  grid-area: nav;
+  align-self: start;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.decorated-zone {
+  position: relative;
+} 
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* декоративный rec */
+.decor {
+  top: 0;
+  right: 29px;
+  grid-area: nav;
+  height: 26px;
+  text-align: end;
+  font-size: 18px;
+  line-height: 138.889%; 
+  position: absolute;
+  visibility: hidden;
+}
+
+.decor::after{
+  content: '';
+  top: 8px;
+  right: -19px; 
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
+  position: absolute;
+  visibility: hidden; 
+}
+
+/* кнопки */
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+  font-size: 18px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  padding: 0px 13px;
+  line-height: 100%;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--text-color);
+  pointer-events: none;
+}  
+
+.header__theme-menu-button:hover {
+  border: 1px solid #32312D66;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.header__title {
+  grid-area: title;
+  color: var(--title-color);
+  text-shadow:  4px 4px 0px var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 83%;
+  margin-inline-start: -20px;
+}
+
+.header__container-for-text {
+  grid-area: text;
+  max-width: calc((100vw - 40px)/2);
+  justify-self: end;
+}
+
+.title-decor {
+  background-color: #ff8dcb;
+  font-weight: 700;
+  line-height:  130% 
+}
+
+/* основная часть со статьями */
+
+.main{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 80px;
+  margin-bottom: 55px;
+}
+
+.article-of-reasons {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  grid-template-rows: 1fr 1fr; 
+  grid-template-areas: 
+  "title top-article"
+  "title bottom-article"; 
+  column-gap: 12px;
+  row-gap: 19px;
+}
+
+.titel-h2 {
+  grid-area: title;
+  text-align: left;
+}
+
+.titel-h3 {
+  margin-block-end: 10px;
+}
+
+.top-article {
+  grid-area: top-article;
+}
+
+.bottom-article {
+  grid-area: bottom-article;
+  
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--title-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.section-specific-reasons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: 1fr auto; 
+  gap: 18px; 
+  grid-template-areas: 
+    "title title title"
+    "multitasking food gadget";
+}
+
+.titel-h2 {
+  grid-area: title;
+}
+
+.article-of-reasons__title {
+  max-height: 47px;
+  max-width: 315px; 
+}
+
+.multitasking {
+  grid-area: multitasking;
+}
+
+.food {
+  grid-area: food;
+}
+
+.gadget {
+  grid-area: gadget;
+} 
+
+/* раздел с советами */
+
+.recommendations {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  grid-template-rows: 0.5fr auto auto auto auto auto;
+  grid-template-areas: 
+  "title title_2"
+  "title nebo"
+  "title music"
+  "title wolk"
+  "title nutrition"
+  "title read";  
+  column-gap: 11px;
+  row-gap: 19px;
+}
+
+.title_2 {
+  grid-area: title_2;
+}
+
+.nebo {
+  grid-area: nebo;
+}
+
+.music {
+  grid-area: music;
+}
+
+.wolk {
+  grid-area: wolk;
+}
+
+.nutrition {
+  grid-area: nutrition;
+}
+
+.read {
+  grid-area: read;
+} 
+
+/* часть с картинками */
+
+.collage__picture {
+  margin-block-start: 20px;
+  display: grid;
+  column-gap: 20px;
+  row-gap: 18px; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1.2fr 1.64fr; 
+  grid-template-areas: 
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street"; 
+}
+
+.sunset {
+  grid-area: sunset;
+  max-width: 100%;
+}
+
+.ice-cream {
+  grid-area: ice-cream;
+  min-height: 100%;
+  max-width: 100%; 
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.tape {
+  grid-area: tape;
+  min-height: 100%;
+  max-width: 100%; 
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.books {
+  grid-area: books;
+  min-height: 100%;
+  max-width: 100%; 
+  background-size: cover;
+  background-position: center;
+}
+
+.street {
+  grid-area: street;
+  max-width: 100%;
+  min-height: 100%;
+} 
+
+/* подвал */
+
+.footer {
+  padding: 20px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  color: var(--title-color);
+  text-shadow:  3px 3px 0px var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 83%;
+}
+

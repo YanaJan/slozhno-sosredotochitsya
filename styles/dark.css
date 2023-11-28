@@ -10,3 +10,117 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+:root .theme_dark {
+  --background-color: #000028;
+  --title-color: #DB00FF;
+  --accent-color: #FF0070;
+  --main-font: 'IBM Plex Mono';
+  --text-color: #F1B2CE;  
+  --background-img: url("../images/cover-image-dark.png");
+}
+
+ @media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #000028;
+    --title-color: #DB00FF;
+    --accent-color: #FF0070;
+    --main-font: 'IBM Plex Mono';
+    --text-color: #F1B2CE;
+    --background-img: url("../images/cover-image-dark.png");
+  }
+
+  .title-decor {
+    color: var(--background-color);
+    background-color: var(--accent-color);
+  }
+  
+  .decor {
+    color: var(--accent-color);
+    visibility: visible;
+  }
+  
+  .decor::after{
+    filter: drop-shadow(0px 0px 4px var(--accent-color));
+    visibility: visible;
+  }
+
+  .decorated-zone::after {
+    border-top: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
+  }
+  
+  .decorated-zone::before {
+    border-left: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--accent-color);
+    pointer-events: none;
+  }  
+  
+  .header__theme-menu-button:hover {
+    border: 1px solid #FF007066;
+  }
+  
+  
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--accent-color);
+  } 
+
+  .theme_dark .link {
+    text-shadow: 2px 2px var(--accent-color);
+  }
+}   
+
+.theme_dark .title-decor {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+/* декоративный rec */
+.theme_dark .decor {
+  color: var(--accent-color);
+  visibility: visible;
+}
+
+.theme_dark .decor::after{
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
+  visibility: visible;
+}
+
+.theme_dark .decorated-zone::after {
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.theme_dark .decorated-zone::before {
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}  
+
+.theme_dark .header__theme-menu-button:hover {
+  border: 1px solid #FF007066;
+}
+
+
+.theme_dark .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.theme_dark .link {
+  text-shadow: 2px 2px var(--accent-color);
+}
