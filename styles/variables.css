@@ -62,6 +62,9 @@
   .recommendations {
     gap: 20px;
   }
+
+  .footer__title {
+    text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 @media (max-width: 375.1px) {
