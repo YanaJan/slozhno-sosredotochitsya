@@ -13,6 +13,7 @@
   background-color: var(--background-color);
   font-family: var(--main-font, Arial, sans-serif);
   color: var(--text-color);
+  background-attachment: fixed;
 }
 
 /* Голова сайта */
@@ -211,14 +212,14 @@
 .section-specific-reasons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr 1fr;
   gap: 20px;
   grid-template-areas:
     'title title title'
     'multitasking food gadget';
 }
 
-.titel-h2 {
+.article-of-reasons_titel-h2 {
   grid-area: title;
 }
 
