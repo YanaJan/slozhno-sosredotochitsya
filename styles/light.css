@@ -3,20 +3,17 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root .theme_light {
-  --background-color: #fff1f7;
-  --title-color: #ffc2e6;
-  --back-decor-color: #ff8dcb;
-  --color-for-bottom: #353430;
-  --color-for-bottom-hover: #32312d66;
-  --accent-color: #ff0070;
-  --main-font: 'IBM Plex Mono';
-  --text-color: #353430;
-  --background-img: url('../images/cover-image-light.png');
-}
 
 .page.theme_light {
-  
+    --background-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --back-decor-color: #ff8dcb;
+    --color-for-bottom: #353430;
+    --color-for-bottom-hover: #32312d66;
+    --accent-color: #ff0070;
+    --main-font: 'IBM Plex Mono';
+    --text-color: #353430;
+    --background-img: url('../images/cover-image-light.png');
 }
 
 @media (prefers-color-scheme: light) {
