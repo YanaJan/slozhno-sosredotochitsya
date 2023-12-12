@@ -294,6 +294,7 @@
 .sunset {
   grid-area: sunset;
   max-width: 100%;
+  object-fit: cover;
 }
 
 .ice-cream {
@@ -324,6 +325,7 @@
   grid-area: street;
   max-width: 100%;
   min-height: 100%;
+  object-fit: cover;
 }
 
 /* подвал */
@@ -339,7 +341,7 @@
 
 .footer__title {
   color: var(--title-color);
-  text-shadow: 3px 3px 0px var(--accent-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 83%;
@@ -399,7 +401,7 @@
   }
 
   .footer__title {
-    text-shadow: 2px 2px 0px var(--accent-color);
+    text-shadow: 2px 2px 0px var(--back-decor-color);
   }
 }
 
@@ -486,6 +488,14 @@
       'books'
       'street';
   }
+
+  .ice-cream {
+    width: 100%;
+  }
+  
+  .books {
+    width: 100%;
+  } 
 
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
